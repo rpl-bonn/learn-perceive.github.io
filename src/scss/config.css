@@ -1,0 +1,46 @@
+:root {
+  --font-family-base: "Source Sans 3", sans-serif;
+  --font-family-heading: "Lato", sans-serif;
+  --font-family-monospace: "Source Code Pro", monospace;
+  --font-family-logo: "Lato", sans-serif;
+
+  --color-primary-bg: #2b3af7;
+  --color-primary-bg-2: #424ff8;
+  --color-primary-bg-3: #702bf7;
+  --color-primary-text: #ffffff;
+  --color-base-bg: #ffffff;
+  --color-base-bg-2: #f8fafc;
+  --color-base-bg-3: #f1f5f9;
+  --color-base-text: #202020;
+  --color-base-text-2: #4b5563;
+  --color-header-text: #111827;
+
+  --logo-text-font-size: 28px;
+  --logo-text-font-weight: 500;
+  --header-height: 60px;
+
+  --menu-font-family: "Source Sans 3", sans-serif;
+  --menu-font-size: {{ .Site.Params.header.header_menu_font_size }};
+  --menu-text-transform: "Capitalize";
+  --menu-font-weight: 400;
+
+  --section-padding: 80px;
+  --card-border-radius: 6px;
+  --button-border-radius: 4px;
+  --card-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+html[data-bs-theme='dark'] {
+  --color-primary-bg: #2b3af7;
+  --color-primary-bg-2: #424ff8;
+  --color-primary-bg-3: #702bf7;
+  --color-primary-text: #fdfcf9;
+  --color-base-bg: #121212;
+  --color-base-bg-2: #1e1e1e;
+  --color-base-bg-3: #232323;
+  --color-base-text: #ffffff;
+  --color-base-text-2: #fdfcf9;
+  --color-logo-text: #ffffff;
+  --color-header-text: #ffffff;
+}
+

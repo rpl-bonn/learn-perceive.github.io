@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Team",
+        "url": "/team/",
+        "weight": 3
+    },
+    {
+        "name": "Research",
+        "url": "/resarch/",
+        "weight": 4
+    },
+    {
+        "name": "Student Projects",
+        "url": "/student-projects/",
+        "weight": 5
+    },
+    {
+        "name": "Join Us",
+        "url": "/opportunities/",
+        "weight": 9
+    }
+]
