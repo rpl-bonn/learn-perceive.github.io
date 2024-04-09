@@ -14,7 +14,7 @@ export default function Layout({ children }) {
     <>
       {/* <SEO /> */}
       <MobileMenu />
-      <header id="header" className="header header-fixed">
+      <header id="header" className="header">
         <Header />
       </header>
       <div id="wrapper" className="wrapper">

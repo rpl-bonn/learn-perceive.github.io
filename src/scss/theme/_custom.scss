@@ -126,3 +126,37 @@
     background-color: var(--color-base-bg-2);
   }
 }
+
+.paper-card {
+  .react-player__preview {
+    @extend .rounded-start;
+  }
+}
+
+.container {
+
+  .image-light {
+    display: flex;
+  }
+  .image-invert {
+    display: none;
+  }
+
+  html[data-bs-theme='dark'] & {
+    .image-light {
+      display: none;
+    }
+    .image-invert {
+      display: flex;
+    }
+  }
+}
+
+.studentProjectDescription {
+  h1 {
+    font-size: inherit;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+}

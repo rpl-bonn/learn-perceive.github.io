@@ -2,7 +2,92 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 // import SEO from "../components/SEO";
 // import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import { getYoutubePlayer } from "../components/Paper";
+import { StaticImage } from "gatsby-plugin-image";
 // import Call from "../components/Call";
+
+function formatDate(dateIsoString) {
+  const newsDate = new Date(dateIsoString);
+  console.log(newsDate)
+  const month = newsDate.getUTCMonth();
+  let monthAbbrev = ""
+  if (month === 0) {
+    monthAbbrev = "Jan";
+  } else if (month === 1) {
+    monthAbbrev = "Feb";
+  } else if (month === 2) {
+    monthAbbrev = "Mar";
+  } else if (month === 3) {
+    monthAbbrev = "Apr";
+  } else if (month === 4) {
+    monthAbbrev = "Mai";
+  } else if (month === 5) {
+    monthAbbrev = "Jun";
+  } else if (month === 6) {
+    monthAbbrev = "Jul";
+  } else if (month === 7) {
+    monthAbbrev = "Aug";
+  } else if (month === 8) {
+    monthAbbrev = "Sep";
+  } else if (month === 9) {
+    monthAbbrev = "Oct";
+  } else if (month === 10) {
+    monthAbbrev = "Nov";
+  } else if (month === 11) {
+    monthAbbrev = "Dec";
+  }
+  return `${monthAbbrev} ${newsDate.getUTCDate()}, ${newsDate.getUTCFullYear()}`;
+}
+
+export const query = graphql`
+  query LandingQuery {
+    allPaper(
+      sort: [{ date: { year: DESC } }, { date: { month: DESC } }]
+      filter: { date: { year: { gte: 2023 } } }
+    ) {
+      nodes {
+        id
+        children {
+          internal {
+            type
+          }
+          ... on uri {
+            url
+          }
+          ... on arxiv {
+            url
+          }
+          ... on doi {
+            url
+          }
+        }
+        title
+        journal
+        authors
+        date {
+          year
+          month
+        }
+      }
+    }
+    allNewsYaml(sort: [{ date: DESC }], limit: 3) {
+      nodes {
+        message
+        date
+        button_1_text
+        button_1_link
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`;
+
 
 const Home = (props) => {
 //   const intro = props.data.intro;
@@ -15,9 +100,22 @@ const Home = (props) => {
 //     intro.frontmatter.intro_image_hide_on_mobile && "intro-image-hide-mobile"
 //   }`;
 
+  let latestPapers = [];
+  const paperData = props.data.allPaper.nodes;
+  for (let paper of paperData) {
+    const video = getYoutubePlayer(paper);
+    if (video) {
+      paper.player = video;
+      latestPapers.push(paper);
+    }
+    if (latestPapers.length >= 2) {
+      break;
+    }
+  }
+
   return (
     <>
-    {/* // <Layout bodyClass="page-home"> */}
+      {/* // <Layout bodyClass="page-home"> */}
       {/* <SEO title={site.title} /> */}
       {/* <Helmet>
         <meta
@@ -25,23 +123,94 @@ const Home = (props) => {
           content="Small Business Theme. Multiple content types using Markdown and JSON sources. Responsive design and SCSS. This is a beautiful and artfully designed starting theme."
         />
       </Helmet> */}
+      <div class="section pt-0 pb-0">
+        <Hero
+          background_image="/images/hero2.png"
+          headings={{
+            heading: props.data.site.siteMetadata.title,
+          }}
+        />
+      </div>
 
-      <div className="intro">
+      {/* AFFILIATIONS */}
+      <div className="section pt-2 pb-2">
         <div className="container">
-          <div className="row justify-content-start">
-            <div className="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-              {/* <div dangerouslySetInnerHTML={{ __html: intro.html }} /> */}
-              {/* <Call showButton /> */}
+          {/* <div className="section-heading">
+            <h2>{"part of"}</h2>
+          </div> */}
+          <div className="row justify-content-center align-items-center">
+            <div className="image-light col-4 col-lg-3 text-center mb-1 mt-1">
+              <StaticImage
+                src="../images/unibonn.png"
+                alt="Uni Bonn"
+                height="80px"
+              />
             </div>
-            {/* {intro.frontmatter.intro_image && (
-              <div className="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-                <img
-                  alt={intro.frontmatter.title}
-                  className={introImageClasses}
-                  src={intro.frontmatter.intro_image}
-                />
+            <div className="image-invert col-4 col-lg-3 text-center mb-1 mt-1">
+              <StaticImage
+                src="../images/unibonn_neg.png"
+                alt="Uni Bonn"
+                height="80px"
+              />
+            </div>
+            <div className="image-light col-4 col-lg-3 text-center mb-1 mt-1">
+              <StaticImage
+                src="../images/lamarr-logo-2023.png"
+                alt="Lamarr Institute"
+                height="80px"
+              />
+            </div>
+            <div className="image-invert col-4 col-lg-3 text-center mb-1 mt-1">
+              <StaticImage
+                src="../images/lamarr-logo-2023-negative.png"
+                alt="Lamarr Institute"
+                height="80px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="section section-base-bg-2">
+        <div className="container">
+          <div className="section-heading pb-2">
+            <h2>{"news"}</h2>
+          </div>
+          <div className="row">
+            {props.data.allNewsYaml.nodes.map((news) => (
+              <div className="col-12 col-md-6 col-lg-4 mb-2">
+                <div className="text-secondary">{formatDate(news.date)}</div>
+                <div className="pb-1">{news.message}</div>
+                {news.button_1_text ? (
+                  <div>
+                  <a
+                    className="btn btn-outline-primary"
+                    href={`${news.button_1_link}`}
+                    target="_blank"
+                  >
+                    {news.button_1_text}
+                    </a>
+                </div>
+                ) : ""}
               </div>
-            )} */}
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="section section-base-bg">
+        <div className="container">
+          <div className="section-heading pb-2">
+            <h2>{"our latest research"}</h2>
+            <Link to="/research">{"view_all"}</Link>
+          </div>
+          <div className="row">
+            {latestPapers.map((paper) => (
+              <div className="col-12 col-md-6 mb-2">
+                {paper.player}
+                <h3 className="pt-1">{paper.title}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -97,7 +266,7 @@ const Home = (props) => {
           </div>
         </div>
       )} */}
-    {/* // </Layout> */}
+      {/* // </Layout> */}
     </>
   );
 };

@@ -28,7 +28,7 @@
 // @import "bootstrap/button-group";
 // @import "bootstrap/nav";
 // @import "bootstrap/navbar";
-// @import "bootstrap/card";
+@import "bootstrap/card";
 // @import "bootstrap/accordion";
 // @import "bootstrap/breadcrumb";
 // @import "bootstrap/pagination";
@@ -122,6 +122,11 @@ body {
 .container {
   padding-left: $grid-gutter-width;
   padding-right: $grid-gutter-width;
+}
+
+figure {
+  margin: 0;
+
 }
 
 // Tweaks for dark mode

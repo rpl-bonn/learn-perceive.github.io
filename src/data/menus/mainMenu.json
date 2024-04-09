@@ -1,12 +1,7 @@
 [
     {
-        "name": "Team",
-        "url": "/team/",
-        "weight": 3
-    },
-    {
         "name": "Research",
-        "url": "/resarch/",
+        "url": "/research/",
         "weight": 4
     },
     {
