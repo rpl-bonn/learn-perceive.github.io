@@ -1,18 +1,27 @@
 import React from "react";
-import Paper from "../components/Paper";
-import Hero from "../components/Hero";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
 export const query = graphql`
   query PaperQuery {
-    allFile(filter: { sourceInstanceName: { eq: "studentprojects" } }) {
+    allFile(
+      filter: { sourceInstanceName: { in: ["studentprojects", "images"] } }
+    ) {
       nodes {
+        id
+        name
+        relativePath
+        sourceInstanceName
         childMarkdownRemark {
           frontmatter {
             title
+            image
             type
           }
           html
+        }
+        childImageSharp {
+          gatsbyImageData
         }
       }
     }
@@ -20,9 +29,10 @@ export const query = graphql`
 `;
 
 const StudentProjects = ({ data }) => {
+  console.log(data);
   return (
     <>
-      <div className="section">
+      <div className="section pb-0">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-8">
@@ -37,32 +47,48 @@ const StudentProjects = ({ data }) => {
       <div className="section">
         <div className="container">
           <div className="row mt-2 mb-2">
-            {data.allFile.nodes.map((project) => (
-              <div className="col-sm-6 mb-3 mb-sm-0">
-                <div className="card">
-                  <div className="card-body">
-                    <div className="mb-1">
-                      {`${project.childMarkdownRemark.frontmatter.type}`
-                        .split(",")
-                        .map((projectType) => (
-                          <span className="badge text-bg-secondary ps-1 pe-1">
-                            {projectType}
-                          </span>
-                        ))}
+            {data.allFile.nodes
+              .filter((node) => node.childMarkdownRemark)
+              .map((project) => (
+                <div className="col-sm-6 mb-3 mb-sm-0">
+                  <div className="card">
+                    {project.childMarkdownRemark.frontmatter.image ? (
+                      <GatsbyImage
+                        className="card-img-top"
+                        image={getImage(
+                          data.allFile.nodes.find(
+                            (node) =>
+                              project.childMarkdownRemark.frontmatter.image ==
+                              node.relativePath
+                          )
+                        )}
+                      />
+                    ) : (
+                      ""
+                    )}
+                    <div className="card-body">
+                      <div className="mb-1">
+                        {`${project.childMarkdownRemark.frontmatter.type}`
+                          .split(",")
+                          .map((projectType) => (
+                            <span className="badge text-bg-secondary ps-1 pe-1 me-1">
+                              {projectType}
+                            </span>
+                          ))}
+                      </div>
+                      <h4 className="card-title">
+                        {project.childMarkdownRemark.frontmatter.title}
+                      </h4>
+                      <div
+                        className="card-text studentProjectDescription"
+                        dangerouslySetInnerHTML={{
+                          __html: project.childMarkdownRemark.html,
+                        }}
+                      ></div>
                     </div>
-                    <h4 className="card-title">
-                      {project.childMarkdownRemark.frontmatter.title}
-                    </h4>
-                    <div
-                      className="card-text studentProjectDescription"
-                      dangerouslySetInnerHTML={{
-                        __html: project.childMarkdownRemark.html,
-                      }}
-                    ></div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
