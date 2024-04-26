@@ -121,6 +121,17 @@ export default function Paper({ data }) {
           {linkText}
         </a>
       );
+      if (type === "arxiv") {
+       links.push(
+         <a
+           className="btn btn-outline-info btn-sm me-1"
+           href={link.url.replace("abs", "pdf")}
+           target="_blank"
+         >
+          PDF
+         </a>
+       );
+      }
     }
   });
 
