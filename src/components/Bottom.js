@@ -6,10 +6,25 @@ export default function Bottom() {
       <div className="container relative">
         <div className="row align-items-center justify-content-between">
           <div className="col-auto">
-
+            <div className="menu-bottom">
+              <ul>
+                <li>
+                  <a href="https://www.uni-bonn.de/en/imprint">imprint</a>
+                </li>
+                <li>
+                  <a href="https://www.uni-bonn.de/en/data-protection-policy">
+                    privacy statement
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className="col-auto">
-            <div className="dark-mode-switcher" id="dark-mode-container" dangerouslySetInnerHTML={{ __html: `
+            <div
+              className="dark-mode-switcher"
+              id="dark-mode-container"
+              dangerouslySetInnerHTML={{
+                __html: `
               <div class="dark-mode-switch">
                 <svg class="dark-mode-icon-dark" data-name="Layer 1" fill="#000000" height="20px" viewbox="0 0 64 64" width="20px" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
                   <title>essential</title>
@@ -25,9 +40,11 @@ export default function Bottom() {
                 </svg>
                 <div class="ball"></div>
               </div>
-              `}} />
+              `,
+              }}
+            />
           </div>
         </div>
       </div>
     </div>
-  )};
+  );};

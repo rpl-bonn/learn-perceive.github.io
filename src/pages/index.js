@@ -132,45 +132,6 @@ const Home = (props) => {
         />
       </div>
 
-      {/* AFFILIATIONS */}
-      <div className="section pt-2 pb-2">
-        <div className="container">
-          {/* <div className="section-heading">
-            <h2>{"part of"}</h2>
-          </div> */}
-          <div className="row justify-content-center align-items-center">
-            <div className="image-light col-4 col-lg-3 text-center mb-1 mt-1">
-              <StaticImage
-                src="../images/unibonn.png"
-                alt="Uni Bonn"
-                height="80px"
-              />
-            </div>
-            <div className="image-invert col-4 col-lg-3 text-center mb-1 mt-1">
-              <StaticImage
-                src="../images/unibonn_neg.png"
-                alt="Uni Bonn"
-                height="80px"
-              />
-            </div>
-            <div className="image-light col-4 col-lg-3 text-center mb-1 mt-1">
-              <StaticImage
-                src="../images/lamarr-logo-2023.png"
-                alt="Lamarr Institute"
-                height="80px"
-              />
-            </div>
-            <div className="image-invert col-4 col-lg-3 text-center mb-1 mt-1">
-              <StaticImage
-                src="../images/lamarr-logo-2023-negative.png"
-                alt="Lamarr Institute"
-                height="80px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="section section-base-bg-2">
         <div className="container">
           <div className="section-heading pb-2">

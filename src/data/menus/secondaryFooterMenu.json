@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Lamarr Institute",
+    "url": "https://lamarr-institute.org",
+    "weight": 1
+  },
+  {
+    "name": "Uni Bonn",
+    "url": "https://uni-bonn.de/",
+    "weight": 2
+  },
+  {
+    "name": "Bonn Center for Robotics",
+    "url": "https://robotics.uni-bonn.de/",
+    "weight": 2
+  }
+]
