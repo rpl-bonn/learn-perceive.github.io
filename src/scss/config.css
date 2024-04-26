@@ -1,11 +1,11 @@
 :root {
   --font-family-base: "Source Sans 3", sans-serif;
-  --font-family-heading: "Lato", sans-serif;
+  --font-family-heading: "Exo 2", sans-serif;
   --font-family-monospace: "Source Code Pro", monospace;
-  --font-family-logo: "Lato", sans-serif;
+  --font-family-logo: "Exo 2", sans-serif;
 
-  --color-primary-bg: #2b3af7;
-  --color-primary-bg-2: #424ff8;
+  --color-primary-bg: #004e9f; /* #2b3af7; */
+  --color-primary-bg-2: #004e9f; /* #424ff8; */
   --color-primary-bg-3: #702bf7;
   --color-primary-text: #ffffff;
   --color-base-bg: #ffffff;
@@ -17,9 +17,9 @@
 
   --logo-text-font-size: 28px;
   --logo-text-font-weight: 500;
-  --header-height: 60px;
+  --header-height: 80px;
 
-  --menu-font-family: "Source Sans 3", sans-serif;
+  --menu-font-family: "Exo 2", sans-serif;
   --menu-font-size: {{ .Site.Params.header.header_menu_font_size }};
   --menu-text-transform: "Capitalize";
   --menu-font-weight: 400;
@@ -31,8 +31,8 @@
 }
 
 html[data-bs-theme='dark'] {
-  --color-primary-bg: #2b3af7;
-  --color-primary-bg-2: #424ff8;
+  --color-primary-bg: #004e9f; /* #2b3af7; */
+  --color-primary-bg-2: #004e9f; /* #424ff8; */
   --color-primary-bg-3: #702bf7;
   --color-primary-text: #fdfcf9;
   --color-base-bg: #121212;
