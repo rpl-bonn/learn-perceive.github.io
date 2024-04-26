@@ -50,7 +50,7 @@ const StudentProjects = ({ data }) => {
             {data.allFile.nodes
               .filter((node) => node.childMarkdownRemark)
               .map((project) => (
-                <div className="col-sm-6 mb-3 mb-sm-0">
+                <div className="col-sm-6 mb-2 mt-2 mb-sm-0">
                   <div className="card">
                     {project.childMarkdownRemark.frontmatter.image ? (
                       <GatsbyImage
