@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Machine Learning and Artificial Intelligence for Embodied AI`,
+    title: `Robot Perception and Learning Lab`,
     description: ``,
     siteUrl: `https://www.yourdomain.tld`,
   },
