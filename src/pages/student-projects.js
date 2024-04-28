@@ -50,11 +50,12 @@ const StudentProjects = ({ data }) => {
             {data.allFile.nodes
               .filter((node) => node.childMarkdownRemark)
               .map((project) => (
-                <div className="col-sm-6 mb-2 mt-2 mb-sm-0">
+                <div className="col-sm-6 mb-2 mt-2 mb-sm-0" key={project.id}>
                   <div className="card">
                     {project.childMarkdownRemark.frontmatter.image ? (
                       <GatsbyImage
                         className="card-img-top"
+                        alt=""
                         image={getImage(
                           data.allFile.nodes.find(
                             (node) =>
@@ -71,7 +72,7 @@ const StudentProjects = ({ data }) => {
                         {`${project.childMarkdownRemark.frontmatter.type}`
                           .split(",")
                           .map((projectType) => (
-                            <span className="badge text-bg-secondary ps-1 pe-1 me-1">
+                            <span className="badge text-bg-secondary ps-1 pe-1 me-1" key={projectType}>
                               {projectType}
                             </span>
                           ))}
