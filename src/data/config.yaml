@@ -1,9 +1,9 @@
 logo:
   logo_text: "Advance"
   logo_image_desktop: /images/logo/logo_text.svg
-  logo_image_mobile: /images/logo/logo-mobile.svg
+  logo_image_mobile: /images/logo/logo_text.svg
   logo_image_desktop_invert: /images/logo/logo_text_neg.svg # used on transparent header and when in dark mode. Normally a white version of the logo.
-  logo_image_mobile_invert: /images/logo/logo-invert-mobile.svg # used on transparent header and when in dark mode. Normally a white version of the logo.
+  logo_image_mobile_invert: /images/logo/logo_text_neg.svg # used on transparent header and when in dark mode. Normally a white version of the logo.
   logo_image_desktop_height: "55px"
   logo_image_desktop_width: "200px"
   logo_image_mobile_height: "55px"
