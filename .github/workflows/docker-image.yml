@@ -26,6 +26,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: registry.gitlab.uni-bonn.de:5050/rpl/containers/website
+          tags: registry.gitlab.uni-bonn.de:5050/rpl/containers/website:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
