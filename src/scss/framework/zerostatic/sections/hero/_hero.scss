@@ -6,10 +6,11 @@
   flex-direction: row;
   background-color: var(--color-primary-bg);
   min-height: 300px;
+  padding-top: var(--header-height);
   @include media-breakpoint-up(md) {
     min-height: 600px;
     padding-top: calc(var(--section-padding) * 2 + var(--header-height));
-    padding-bottom: calc(var(--section-padding) * 2)
+    padding-bottom: calc(var(--section-padding) * 2);
   }
   &.hero-gradient {
     background-image: linear-gradient(to right, var(--color-primary-bg), var(--color-primary-bg-3));
@@ -44,6 +45,9 @@
       color: inherit;
       font-weight: 600;
       font-size: 56px;
+      @include media-breakpoint-down(md) {
+        font-size: 40px;
+      }
     }
     p {
       color: inherit;
