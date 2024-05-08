@@ -9,7 +9,6 @@ import { StaticImage } from "gatsby-plugin-image";
 
 function formatDate(dateIsoString) {
   const newsDate = new Date(dateIsoString);
-  console.log(newsDate)
   const month = newsDate.getUTCMonth();
   let monthAbbrev = ""
   if (month === 0) {
