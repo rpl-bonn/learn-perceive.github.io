@@ -18,7 +18,7 @@ In your application, please include
 
 ## Research Engineer
 
-As a resaerch engineer, you work with our robots and write stable software to deploy cutting edge AI systems in the real world. Candidates should have excellent grades and should be enrolled into a Master program. Good experience in python is required, in one of ROS, pytorch, or C++ preferred.
+As a research engineer, you work with our robots and write stable software to deploy cutting edge AI systems in the real world. Candidates should have excellent grades and should be enrolled into a Master program at Uni Bonn. Good experience in python is required, in one of ROS, pytorch, or C++ preferred.
 
 ## Visiting PhDs / PostDocs
 
