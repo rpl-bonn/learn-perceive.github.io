@@ -5,9 +5,9 @@ slug: /opportunities
 
 ## PhD Positions
 
-We are hiring for PhD positions from autumn 2024 onwards. Please reach out if you are interested to be part of my new lab on robot perception and learning.
+We are hiring for PhD positions from autumn 2024 onwards. Please reach out if you are interested to be part of our new lab on robot perception and learning.
 
-Candidates should have a MSc degree in computer science or engineering with a focus on courses in computer vision, robotics, and machine learning.
+Candidates should have a MSc degree in computer science or engineering with excellent grades and a focus on courses in computer vision, robotics, and machine learning.
 
 In your application, please include
 
@@ -15,6 +15,8 @@ In your application, please include
 - a research statement explaining what topics and questions you want to investigate in your PhD studies
 - certificates or transcripts from your Bachelor and Master degrees
 - contact information for the supervisors of your master thesis and/or other practical research projects
+
+Please send your application to blumh@uni-bonn.de
 
 ## Research Engineer
 
