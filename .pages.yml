@@ -20,4 +20,3 @@ content:
       - name: image
         label: Image
         type: image
-        path: projects/
