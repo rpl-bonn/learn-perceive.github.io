@@ -13,10 +13,13 @@ content:
     fields:
       - name: title
         label: Title
-        type: text
+        type: string
       - name: type
         label: Type
         type: string
       - name: image
         label: Image
         type: image
+      - name: body
+        label: Description
+        type: rich-text
