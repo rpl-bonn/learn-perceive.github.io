@@ -9,6 +9,6 @@ blumh@uni-bonn.de
 
 Room 0.043
 
-postal address:
-Friedrich-Hirzebruch-Allee 5
+postal address:<br>
+Friedrich-Hirzebruch-Allee 5<br>
 53115 Bonn
