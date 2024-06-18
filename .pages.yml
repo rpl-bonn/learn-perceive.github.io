@@ -16,6 +16,4 @@ content:
         type: text
       - name: type
         label: Type
-        type: select
-        options:
-          values: [ "master thesis", "bachelor thesis", "lab" ]
+        type: string
