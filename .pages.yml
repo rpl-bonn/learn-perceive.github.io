@@ -1,6 +1,6 @@
 media:
   input: src/images
-  output: 
+  output: ""
 content:
   - name: projects
     label: Projects
