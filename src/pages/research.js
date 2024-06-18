@@ -72,9 +72,9 @@ const WorkPage = ({ data }) => {
               We investigate robots that can understand their environment
               semantically and geometrically, in order to perform manipulation
               and other safety critical tasks in proximity to humans. This
-              encompasses detection of unknown, open-set objects in the
-              environment, adaptation of robots to new environments, and
-              continual self-supervised learning.
+              encompasses semantic understanding under open-set conditions, 
+              map representations of the environment, active perception and planning, 
+              as well as adaptation and continual self-supervised learning.
             </div>
           </div>
         </div>
