@@ -2,6 +2,9 @@ import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
+export const Head = () => <title>Open Student Projects - Robot Perception and Learning Lab</title>;
+
+
 export const query = graphql`
   query PaperQuery {
     allFile(

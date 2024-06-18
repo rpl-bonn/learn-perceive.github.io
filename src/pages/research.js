@@ -3,6 +3,9 @@ import Paper from "../components/Paper";
 import Hero from "../components/Hero";
 import { graphql } from "gatsby";
 
+export const Head = () => <title>Our Research - Robot Perception and Learning Lab</title>;
+
+
 export const query = graphql`
   query PaperQuery {
     allPaper(

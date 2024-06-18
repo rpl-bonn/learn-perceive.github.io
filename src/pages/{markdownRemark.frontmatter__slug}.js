@@ -13,6 +13,11 @@ export const pageQuery = graphql`
   }
 `
 
+export const Head = ({ data }) => (
+  <title>{data.markdownRemark.frontmatter.title} - Robot Perception and Learning Lab</title>
+);
+
+
 const renderedPage = ({ data }) => {
   return (
     <>

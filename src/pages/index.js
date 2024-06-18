@@ -39,6 +39,9 @@ function formatDate(dateIsoString) {
   return `${monthAbbrev} ${newsDate.getUTCDate()}, ${newsDate.getUTCFullYear()}`;
 }
 
+export const Head = () => <title>Robot Perception and Learning Lab</title>;
+
+
 export const query = graphql`
   query LandingQuery {
     allPaper(
