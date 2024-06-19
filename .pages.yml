@@ -1,0 +1,25 @@
+media:
+  input: src/images
+  output: ""
+content:
+  - name: projects
+    label: Projects
+    path: src/content/student_projects
+    type: collection
+    view:
+      fields: [ title ]
+      primary: title
+      sort: [ title ]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: type
+        label: Type
+        type: string
+      - name: image
+        label: Image
+        type: image
+      - name: body
+        label: Description
+        type: rich-text
