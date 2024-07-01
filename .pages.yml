@@ -23,3 +23,11 @@ content:
       - name: body
         label: Description
         type: rich-text
+  - name: news
+    label: News
+    path: src/content/news.yaml
+    type: file
+    fields:
+      - name: message
+        label: Message
+        type: rich-text
