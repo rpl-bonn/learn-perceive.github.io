@@ -27,6 +27,7 @@ content:
     label: News
     path: src/content/news.yaml
     type: file
+    format: yaml
     fields:
       - name: message
         label: Message
