@@ -17,6 +17,10 @@ content:
       - name: type
         label: Type
         type: string
+      - name: visible
+        label: Visible
+        type: boolean
+        default: true
       - name: image
         label: Image
         type: image
