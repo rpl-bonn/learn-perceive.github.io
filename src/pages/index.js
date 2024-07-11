@@ -127,7 +127,7 @@ const Home = (props) => {
       </Helmet> */}
       <div class="section pt-0 pb-0">
         <Hero
-          background_image="/images/hero2.png"
+          background_image="/images/hero2.jpg"
           headings={{
             heading: props.data.site.siteMetadata.title,
           }}
