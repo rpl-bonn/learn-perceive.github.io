@@ -20,6 +20,7 @@ export const query = graphql`
             title
             image
             type
+            visible
           }
           html
         }
@@ -52,6 +53,7 @@ const StudentProjects = ({ data }) => {
           <div className="row mt-2 mb-2">
             {data.allFile.nodes
               .filter((node) => node.childMarkdownRemark)
+              .filter((node) => node.childMarkdownRemark.frontmatter.visible)
               .map((project) => (
                 <div className="col-sm-6 mb-2 mt-2 mb-sm-0" key={project.id}>
                   <div className="card">
