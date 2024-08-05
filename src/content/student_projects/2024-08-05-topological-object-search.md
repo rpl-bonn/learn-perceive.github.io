@@ -1,7 +1,7 @@
 ---
 title: topological object search
 type: bachelor thesis, master thesis
-visible: false
+visible: true
 ---
 Object search is the problem of letting a robot find an object of interest. For this, the robot has to explore the environment it is placed into until the object is found. To explore an environment, current robotic methods use geometrical sensing, i.e. stereo cameras, LiDAR sensors or similar, such that they can create a 3D reconstruction of the environment which also has a clear distinction of 'known & occupied', 'known & unoccupied' and 'unknown' regions of space.
 
