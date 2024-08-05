@@ -1,5 +1,5 @@
 ---
-title: topological object search
+title: Topological Object Search
 type: bachelor thesis, master thesis
 visible: true
 ---
