@@ -64,8 +64,8 @@ const StudentProjects = ({ data }) => {
                         image={getImage(
                           data.allFile.nodes.find(
                             (node) =>
-                              project.childMarkdownRemark.frontmatter.image ==
-                              node.relativePath
+                              project.childMarkdownRemark.frontmatter.image ===
+                              `/${node.relativePath}`
                           )
                         )}
                       />
