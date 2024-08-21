@@ -1,7 +1,7 @@
 ---
 title: Automatic Scene Graph Generation
 type: master thesis
-visible: true
+visible: false
 image: /projects/fireplace_label01.png
 ---
 TODO
