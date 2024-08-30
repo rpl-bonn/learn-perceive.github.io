@@ -31,8 +31,8 @@
 }
 
 html[data-bs-theme='dark'] {
-  --color-primary-bg: #004e9f; /* #2b3af7; */
-  --color-primary-bg-2: #004e9f; /* #424ff8; */
+  --color-primary-bg: #702bf7; /* #2b3af7; */
+  --color-primary-bg-2: #702bf7; /* #424ff8; */
   --color-primary-bg-3: #702bf7;
   --color-primary-text: #fdfcf9;
   --color-base-bg: #121212;
