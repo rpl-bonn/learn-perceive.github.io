@@ -13,5 +13,10 @@
     "name": "Bonn Center for Robotics",
     "url": "https://robotics.uni-bonn.de/",
     "weight": 2
+  },
+  {
+    "name": "PhenoRob Excellence Cluster",
+    "url": "https://www.phenorob.de/index.html",
+    "weight": 3
   }
 ]
