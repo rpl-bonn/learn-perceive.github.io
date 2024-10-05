@@ -1,22 +1,27 @@
 [
-    {
-        "name": "Team",
-        "url": "/team/",
-        "weight": 3
-    },
-    {
-        "name": "Research",
-        "url": "/research/",
-        "weight": 4
-    },
-    {
-        "name": "Student Projects",
-        "url": "/student-projects/",
-        "weight": 5
-    },
-    {
-        "name": "Join Us",
-        "url": "/opportunities/",
-        "weight": 9
-    }
+  {
+    "name": "Team",
+    "url": "/team/",
+    "weight": 3
+  },
+  {
+    "name": "Research",
+    "url": "/research/",
+    "weight": 4
+  },
+  {
+    "name": "Lectures",
+    "url": "/lectures/",
+    "weight": 5
+  },
+  {
+    "name": "Student Projects",
+    "url": "/student-projects/",
+    "weight": 6
+  },
+  {
+    "name": "Join Us",
+    "url": "/opportunities/",
+    "weight": 9
+  }
 ]
