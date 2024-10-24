@@ -1,5 +1,5 @@
 ---
-title: LabelMaker for 2D Segmentations
+title: Large-Scale Segmentation Auto-Labelling
 type: master thesis
 visible: true
 image: /projects/fireplace_label01.png
