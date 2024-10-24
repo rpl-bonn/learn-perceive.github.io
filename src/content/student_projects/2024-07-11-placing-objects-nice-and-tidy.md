@@ -1,7 +1,7 @@
 ---
 title: placing objects 'nice and tidy'
 type: bachelor thesis, master thesis
-visible: true
+visible: false
 image: /projects/stretch-mm.jpg
 ---
 In this project, we build upon [spot-compose](https://spot-compose.github.io/) and investigate the problem of placing objects into drawers, shelfs, and other furniture. This requires to already plan when grasping the object how the robot hand will need to move to place the object in the required pose into the furniture. It also requires to avoid collision with the furniture while placing the object.
