@@ -1,7 +1,7 @@
 ---
 title: Automatic Scene Graph Generation
 type: master thesis
-visible: false
+visible: true
 image: /projects/scenegraph.jpg
 ---
 Scene graphs allow to easily model dynamic environments for robots: Every object is a node in a graph and can be moved around, with edges combining nodes based on geometric or semantic proximity, and connections to higher levels grouping nodes per room, floor, and building.
