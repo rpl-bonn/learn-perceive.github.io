@@ -26,7 +26,7 @@ content:
         type: image
       - name: body
         label: Description
-        type: rich-text
+        type: code
   - name: lectures
     label: Lectures
     path: src/content/lectures
@@ -47,7 +47,7 @@ content:
         type: string
       - name: body
         label: Description
-        type: rich-text
+        type: code
   - name: news
     label: News
     path: src/content/news.yaml
