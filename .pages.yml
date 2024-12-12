@@ -27,6 +27,8 @@ content:
       - name: body
         label: Description
         type: code
+        options:
+          language: markdown
   - name: lectures
     label: Lectures
     path: src/content/lectures
