@@ -1,4 +1,4 @@
-FROM node:21 as build
+FROM node:22 as build
 RUN npm install -g gatsby-cli
 WORKDIR /app
 ADD . ./
