@@ -57,3 +57,8 @@ content:
     path: src/content/news.yaml
     type: file
     format: raw
+  - name: team
+    label: Team
+    path: src/content/team.yaml
+    type: file
+    format: raw
