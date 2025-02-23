@@ -8,5 +8,10 @@
     "name": "Contact",
     "url": "/contact/",
     "weight": 2
+  },
+  {
+    "name": "Documentation",
+    "url": "https://docs.rpl.uni-bonn.de/",
+    "weight": 3
   }
 ]
