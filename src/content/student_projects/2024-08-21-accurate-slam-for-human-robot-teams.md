@@ -1,7 +1,7 @@
 ---
 title: Accurate SLAM for Human-Robot Teams
 type: bachelor thesis, master thesis
-visible: true
+visible: false
 image: /projects/60616b0b-7d43-44eb-9436-b9827095c92e.jpeg
 ---
 We extend the [lamar.ethz.ch](http://lamar.ethz.ch) benchmark to develop accurate SLAM methods that can co-register drones, legged robots, wheeled robots, smartphones, and mixed reality headsets based on visual SLAM.
