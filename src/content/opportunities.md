@@ -18,7 +18,7 @@ Candidates should have a MSc degree in computer science or engineering with exce
 
 Please send your application to blumh@uni-bonn.de. -->
 
-In case that you are interested in a PhD position in the lab, please indicate your interest by filling in this [form](https://cloud.vi.cs.uni-bonn.de/index.php/apps/forms/s/krPjagxoEBKr3y95k7cpg9ic).
+In case that you are interested in a PhD position in the lab, please indicate your interest by filling in this [form](https://cloud.rpl.uni-bonn.de/index.php/apps/forms/s/wrfd9McWPKbAjEp6LwKffwgc).
 
 ## Research Engineer
 
