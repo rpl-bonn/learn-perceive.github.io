@@ -5,7 +5,7 @@ slug: /opportunities
 
 ## PhD Positions
 
-We are hiring for PhD positions from autumn 2024 onwards. Please reach out if you are interested to be part of our new lab on robot perception and learning.
+Please reach out if you are interested to be part of our new lab on robot perception and learning.
 
 Candidates should have a MSc degree in computer science or engineering with excellent grades and a focus on courses in computer vision, robotics, and machine learning.
 
