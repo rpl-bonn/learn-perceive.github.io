@@ -16,11 +16,11 @@
   button_1_link: https://rrow2024.github.io
 - date: 2025-02-26
   message: 1 paper accepted to RA-L and 3 papers accepted to CVPR 2025
-- date: 2025-06-25
-  message: 1 oaoer accepted to ICCV 2025 and 3 papers accepted at IROS 2025
 - date: 2025-06-20
   message: We are co-organizing workshops on Active Perception at IROS and Cross-Device Localization at ICCV.
   button_1_text: ICCV CroCoDL Workshop
   button_1_link: https://localizoo.com/workshop/
   button_2_text: IROS Active Perception WS
   button_2_link: https://activep-ws.github.io/
+- date: 2025-06-25
+  message: 1 paper accepted to ICCV 2025 and 3 papers accepted at IROS 2025
