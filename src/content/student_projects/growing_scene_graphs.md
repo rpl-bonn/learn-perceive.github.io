@@ -1,10 +1,10 @@
 ---
 title: Growing Scene Graphs from Observations
 type: master thesis
-visible: false
-image: /projects/scenegraph.jpg
+visible: true
+image: //projects/scenegraph.jpg
 ---
-Motivation: Building "dynamic Scene Graphs" that allow to add to the already acquired static information of the scene data that can be learned from observations based on the users interactions How: 'Mine' the knowledge from egocentric observations (e.g. aria glasses, HoloLens). Potentially, action recognition, and tracking, etc. Will be helpful to process these observations. Then build a static scene graph with the information of the environment. Some information is stored explicitly but all the information should be ‘queryable by language’ such that we can answer
+As you walk around in a room with smart glasses on, or as a robot explores a room, we build a growing representation of all observed objects. As soon as the robot or human interacts with an object, we update its pose accordingly. If a door is opened or a drawer pulled out, we update the observed dimensions and add the objects inside as leafs to the drawer node. Over time in this way, we grow a complete, dynamic representation of a scene.
 
 # Requirements
 
