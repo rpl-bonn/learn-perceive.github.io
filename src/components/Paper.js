@@ -43,6 +43,8 @@ export default function Paper({ data }) {
       )
     ) {
       conference_summary = `ICRA ${data.date.year}`;
+    } else if (data.journal.includes("European Conference on Computer Vision")) {
+      conference_summary = `ECCV ${data.date.year}`;
     } else if (data.journal.includes("ISARC")) {
       conference_summary = `ISARC ${data.date.year}`;
     } else if (data.journal.includes(`${data.date.year}`)) {
