@@ -1,6 +1,4 @@
 import React from "react";
-import Paper from "../components/Paper";
-import Hero from "../components/Hero";
 import { graphql } from "gatsby";
 
 export const Head = () => <title>Lectures - Robot Perception and Learning Lab</title>;
