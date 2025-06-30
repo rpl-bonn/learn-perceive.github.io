@@ -23,7 +23,7 @@ export function getYoutubePlayer(data) {
       );
     }
   });
-  return youtube_player
+  return youtube_player;
 }
 
 export default function Paper({ data }) {
@@ -43,8 +43,12 @@ export default function Paper({ data }) {
       )
     ) {
       conference_summary = `ICRA ${data.date.year}`;
-    } else if (data.journal.includes("European Conference on Computer Vision")) {
+    } else if (
+      data.journal.includes("European Conference on Computer Vision")
+    ) {
       conference_summary = `ECCV ${data.date.year}`;
+    } else if (data.journal.includes("Computer Vision and Pattern Recognition")) {
+      conference_summary = `CVPR ${data.date.year}`;
     } else if (data.journal.includes("ISARC")) {
       conference_summary = `ISARC ${data.date.year}`;
     } else if (data.journal.includes(`${data.date.year}`)) {
@@ -96,6 +100,28 @@ export default function Paper({ data }) {
           />
         </figure>
       );
+    } else if (
+      link.internal.type === "uri" &&
+      link.url &&
+      !media_content &&
+      (link.url.endsWith(".png") ||
+        link.url.endsWith(".jpg") ||
+        link.url.endsWith(".jpeg") ||
+        link.url.endsWith(".gif") ||
+        link.url.endsWith(".webp"))
+    ) {
+      media_content = (
+        <div
+          className="ratio ratio-16x9 rounded-start"
+          style={{
+            backgroundImage: `url(${link.url})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+          aria-label="paper figure"
+        ></div>
+      );
     } else if (link.url) {
       const {
         internal: { type },
@@ -124,15 +150,15 @@ export default function Paper({ data }) {
         </a>
       );
       if (type === "arxiv") {
-       links.push(
-         <a
-           className="btn btn-outline-info btn-sm me-1"
-           href={link.url.replace("abs", "pdf")}
-           target="_blank"
-         >
-          PDF
-         </a>
-       );
+        links.push(
+          <a
+            className="btn btn-outline-info btn-sm me-1"
+            href={link.url.replace("abs", "pdf")}
+            target="_blank"
+          >
+            PDF
+          </a>
+        );
       }
     }
   });
@@ -168,7 +194,7 @@ export default function Paper({ data }) {
         <div className="card mb-3 paper-card">
           <div className="card-body">
             <h5 className="card-title">{data.title}</h5>
-            <p className="card-text">
+            <p className="card-text mb-1">
               <small className="text-body-secondary">
                 {conference_summary}
               </small>
