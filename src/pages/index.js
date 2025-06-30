@@ -155,6 +155,17 @@ const Home = (props) => {
                     </a>
                 </div>
                 ) : ""}
+                {news.button_2_text ? (
+                  <div>
+                  <a
+                    className="btn btn-outline-primary"
+                    href={`${news.button_2_link}`}
+                    target="_blank"
+                  >
+                    {news.button_2_text}
+                    </a>
+                </div>
+                ) : ""}
               </div>
             ))}
           </div>
