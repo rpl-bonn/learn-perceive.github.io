@@ -1,8 +1,8 @@
 ---
 title: Active Robotic Search for Open-World Perception
 type: master thesis
-visible: true
-image: /projects/lion.jpg
+visible: false
+image: //projects/lion.jpg
 ---
 In the active perception task we investigate how a robot can improve its understanding of the environment it operates in by actively deciding where and how to look at the things that it finds in its surroundings. For example, if the robot has high uncertainty (low information) about an object in the environment, we can apply active perception algorithms to guide it to gather more sensory data in this area. Representative methods using drone platforms include citation [1] for autonomous exploration of cluttered environments and [2] for top-down terrain monitoring using computer vision.
 
