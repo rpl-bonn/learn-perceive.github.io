@@ -79,6 +79,8 @@ export const query = graphql`
         date
         button_1_text
         button_1_link
+        button_2_text
+        button_2_link
       }
     }
     site {
