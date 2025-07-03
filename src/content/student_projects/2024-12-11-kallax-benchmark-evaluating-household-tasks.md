@@ -1,8 +1,8 @@
 ---
 title: "KALLAX Benchmark: Evaluating Robots on Household Tasks"
 type: bachelor thesis, master thesis
-visible: true
-image: /projects/kallax.jpeg
+visible: false
+image: //projects/kallax.jpeg
 ---
 Currently there are three options to evaluate a robot for pick-and-place tasks in a home setting: 
 
