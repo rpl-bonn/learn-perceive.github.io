@@ -148,26 +148,30 @@ const Home = (props) => {
                 <div className="pb-1">{news.message}</div>
                 {news.button_1_text ? (
                   <div className="pb-2">
-                  <a
-                    className="btn btn-outline-primary"
-                    href={`${news.button_1_link}`}
-                    target="_blank"
-                  >
-                    {news.button_1_text}
+                    <a
+                      className="btn btn-outline-primary"
+                      href={`${news.button_1_link}`}
+                      target="_blank"
+                    >
+                      {news.button_1_text}
                     </a>
-                </div>
-                ) : ""}
+                  </div>
+                ) : (
+                  ""
+                )}
                 {news.button_2_text ? (
                   <div>
-                  <a
-                    className="btn btn-outline-primary"
-                    href={`${news.button_2_link}`}
-                    target="_blank"
-                  >
-                    {news.button_2_text}
+                    <a
+                      className="btn btn-outline-primary"
+                      href={`${news.button_2_link}`}
+                      target="_blank"
+                    >
+                      {news.button_2_text}
                     </a>
-                </div>
-                ) : ""}
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             ))}
           </div>
@@ -185,6 +189,7 @@ const Home = (props) => {
               <div className="col-12 col-md-6 mb-2">
                 {paper.player}
                 <h3 className="pt-1">{paper.title}</h3>
+                <div className="text-secondary">{paper.journal} {paper.date.year}</div>
               </div>
             ))}
           </div>
