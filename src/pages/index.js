@@ -147,7 +147,7 @@ const Home = (props) => {
                 <div className="text-secondary">{formatDate(news.date)}</div>
                 <div className="pb-1">{news.message}</div>
                 {news.button_1_text ? (
-                  <div>
+                  <div className="pb-2">
                   <a
                     className="btn btn-outline-primary"
                     href={`${news.button_1_link}`}
