@@ -22,9 +22,9 @@
   button_1_link: https://localizoo.com/workshop/
   button_2_text: IROS Active Perception WS
   button_2_link: https://activep-ws.github.io/
-- date: 2025-06-25
-  message: In total 6 papers accepted to ICCV, IROS, Humanoids, and CoRL!
 - date: 2025-08-07
+  message: In total 6 papers accepted to ICCV, IROS, Humanoids, and CoRL!
+- date: 2025-06-21
   message: Hermann Blum gives an invited talk at the RSS Visual Slam Workshop
   button_1_text: Talk Recording
   button_1_link: https://youtu.be/RmJ0fikJQKk
