@@ -1,0 +1,81 @@
+@Article{Sun.etal.2025a,
+  title              = {FrontierNet: Learning Visual Cues to Explore},
+  journaltitle       = {arXiv},
+  author             = {Sun, Boyang and Chen, Hanzhi and Leutenegger, Stefan and Cadena, Cesar and Pollefeys, Marc and Blum, Hermann},
+  abstract           = {Exploration of unknown environments is crucial for autonomous robots; it allows them to actively reason and decide on what new data to acquire for different tasks, such as mapping, object discovery, and environmental assessment. Existing solutions, such as frontier-based exploration approaches, rely heavily on 3D map operations, which are limited by map quality and, more critically, often overlook valuable context from visual cues. This work aims at leveraging 2D visual cues for efficient autonomous exploration, addressing the limitations of extracting goal poses from a 3D map. We propose a visual-only frontier-based exploration system, with FrontierNet as its core component. FrontierNet is a learning-based model that (i) proposes frontiers, and (ii) predicts their information gain, from posed RGB images enhanced by monocular depth priors. Our approach provides an alternative to existing 3D-dependent goal-extraction approaches, achieving a 15\% improvement in early-stage exploration efficiency, as validated through extensive simulations and real-world experiments.},
+  year               = {2025},
+  doi                = {10.48550/arXiv.2501.04597},
+  url                = {https://arxiv.org/abs/2501.04597}
+}
+
+@InProceedings{Blum.etal.2025a,
+  title              = {CroCoDL: Cross-device Collaborative Dataset for Localization},
+  booktitle          = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  author             = {Blum, Hermann and Mercurio, Alessandro and O'Reilly, Joshua and Engelbracht, Tim and Dusmanu, Mihai and Pollefeys, Marc and Bauer, Zuria},
+  abstract           = {Accurate localization plays a pivotal role in the autonomy of systems operating in unfamiliar environments, particularly when interaction with humans is expected. High-accuracy visual localization systems encompass various components, such as feature extractors, matchers, and pose estimation methods. This complexity translates to the necessity of robust evaluation settings and pipelines. However, existing datasets and benchmarks primarily focus on single-agent scenarios, overlooking the critical issue of cross-device localization. Different agents with different sensors will show their own specific strengths and weaknesses, and the data they have available varies substantially. This work addresses this gap by enhancing an existing augmented reality visual localization benchmark with data from legged robots, and evaluating human-robot, cross-device mapping and localization. Our contributions extend beyond device diversity and include high environment variability, spanning ten distinct locations ranging from disaster sites to art exhibitions. Each scene in our dataset features recordings from robot agents, hand-held and head-mounted devices, and high-accuracy ground truth LiDAR scanners, resulting in a comprehensive multi-agent dataset and benchmark. This work represents a significant advancement in the field of visual localization benchmarking, with key insights into the performance of cross-device localization methods across diverse settings.},
+  pages              = {27424--27434},
+  year               = {2025},
+}
+
+@InProceedings{Ji.etal.2025a,
+  title              = {ARKit LabelMaker: A New Scale for Indoor 3D Scene Understanding},
+  booktitle          = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  author             = {Ji, Guangda and Weder, Silvan and Engelmann, Francis and Pollefeys, Marc and Blum, Hermann},
+  abstract           = {Neural network performance scales with both model size and data volume, as shown in both language and image processing. This requires scaling-friendly architectures and large datasets. While transformers have been adapted for 3D vision, a `GPT-moment' remains elusive due to limited training data. We introduce ARKit LabelMaker, a large-scale real-world 3D dataset with dense semantic annotation that is more than three times larger than prior largest dataset. Specifically, we extend ARKitScenes with automatically generated dense 3D labels using an extended LabelMaker pipeline, tailored for large-scale pre-training. Training on our dataset improves accuracy across architectures, achieving state-of-the-art 3D semantic segmentation scores on ScanNet and ScanNet200, with notable gains on tail classes.}, 
+  pages              = {4398--4407},
+  year               = {2025},
+  doi                = {10.48550/arXiv.2410.13924}
+  url                = {https://arxiv.org/abs/2410.13924}
+}
+
+@InProceedings{Xu.etal.2025a,
+  title              = {DepthSplat: Connecting Gaussian Splatting and Depth},
+  booktitle          = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  author             = {Xu, Haofei and Peng, Songyou and Wang, Fangjinhua and Blum, Hermann and Barath, Daniel and Geiger, Andreas and Pollefeys, Marc},
+  abstract           = {Gaussian splatting and single-view depth estimation are typically studied in isolation. In this paper, we present DepthSplat to connect Gaussian splatting and depth estimation and study their interactions. More specifically, we first contribute a robust multi-view depth model by leveraging pre-trained monocular depth features, leading to high-quality feed-forward 3D Gaussian splatting reconstructions. We also show that Gaussian splatting can serve as an unsupervised pre-training objective for learning powerful depth models from large-scale multi-view posed datasets. We validate the synergy between Gaussian splatting and depth estimation through extensive ablation and cross-task transfer experiments. Our DepthSplat achieves state-of-the-art performance on ScanNet, RealEstate10K and DL3DV datasets in terms of both depth estimation and novel view synthesis, demonstrating the mutual benefits of connecting both tasks. In addition, DepthSplat enables feed-forward reconstruction from 12 input views (512x960 resolutions) in 0.6 seconds.},
+  pages              = {16453--16463},
+  year               = {2025},
+  doi                = {10.48550/arXiv.2410.13862}
+  url                = {https://arxiv.org/abs/2410.13862}
+}
+
+
+@Article{Rotondi.etal.2025a,
+  title              = {FunGraph: Functionality Aware 3D Scene Graphs for Language-Prompted Scene Interaction},
+  journaltitle       = {arXiv},
+  author             = {Rotondi, Dennis and Scaparro, Fabio and Blum, Hermann and Arras, Kai O},
+  abstract           = {The concept of 3D scene graphs is increasingly recognized as a powerful semantic and hierarchical representation of the environment. Current approaches often address this at a coarse, object-level resolution. In contrast, our goal is to develop a representation that enables robots to directly interact with their environment by identifying both the location of functional interactive elements and how these can be used. To achieve this, we focus on detecting and storing objects at a finer resolution, focusing on affordance-relevant parts. The primary challenge lies in the scarcity of data that extends beyond instance-level detection and the inherent difficulty of capturing detailed object features using robotic sensors. We leverage currently available 3D resources to generate 2D data and train a detector, which is then used to augment the standard 3D scene graph generation pipeline. Through our experiments, we demonstrate that our approach achieves functional element segmentation comparable to state-of-the-art 3D models and that our augmentation enables task-driven affordance grounding with higher accuracy than the current solutions.},
+  year               = {2025},
+  doi                = {10.48550/arXiv.2503.07909},
+  url                = {https://arxiv.org/abs/2503.07909}
+}
+
+@Article{Behrens.etal.2024a,
+  title              = {Lost \& Found: Updating Dynamic 3D Scene Graphs from Egocentric Observations},
+  journaltitle       = {arXiv},
+  author             = {Behrens, Tjark and Zurbrügg, René and Pollefeys, Marc and Bauer, Zuria and Blum, Hermann},
+  abstract           = {Recent approaches have successfully focused on the segmentation of static reconstructions, thereby equipping downstream applications with semantic 3D understanding. However, the world in which we live is dynamic, characterized by numerous interactions between the environment and humans or robotic agents. Static semantic maps are unable to capture this information, and the naive solution of rescanning the environment after every change is both costly and ineffective in tracking e.g. objects being stored away in drawers. With Lost \& Found we present an approach that addresses this limitation. Based solely on egocentric recordings with corresponding hand position and camera pose estimates, we are able to track the 6DoF poses of the moving object within the detected interaction interval. These changes are applied online to a transformable scene graph that captures object-level relations. Compared to state-of-the-art object pose trackers, our approach is more reliable in handling the challenging egocentric viewpoint and the lack of depth information. It outperforms the second-best approach by 34\% and 56\% for translational and orientational error, respectively, and produces visibly smoother 6DoF object trajectories. In addition, we illustrate how the acquired interaction information in the dynamic scene graph can be employed in the context of robotic applications that would otherwise be unfeasible: We show how our method allows to command a mobile manipulator through teach \& repeat, and how information about prior interaction allows a mobile manipulator to retrieve an object hidden in a drawer. Code, videos and corresponding data are accessible at https://behretj.github.io/LostAndFound},
+  year               = {2024},
+  doi                = {10.48550/arXiv.2411.19162},
+  url                = {https://arxiv.org/abs/2411.19162},
+}
+
+@Article{Engelbracht.etal.2024a,
+  title              = {SpotLight: Robotic Scene Understanding through Interaction and Affordance Detection},
+  journaltitle       = {arXiv},
+  author             = {Engelbracht, Tim and Zurbrügg, René and Pollefeys, Marc and Blum, Hermann and Bauer, Zuria},
+  abstract           = {Despite increasing research efforts on household robotics, robots intended for deployment in domestic settings still struggle with more complex tasks such as interacting with functional elements like drawers or light switches, largely due to limited task-specific understanding and interaction capabilities. These tasks require not only detection and pose estimation but also an understanding of the affordances these elements provide. To address these challenges and enhance robotic scene understanding, we introduce SpotLight: A comprehensive framework for robotic interaction with functional elements, specifically light switches. Furthermore, this framework enables robots to improve their environmental understanding through interaction. Leveraging VLM-based affordance prediction to estimate motion primitives for light switch interaction, we achieve up to 84\% operation success in real world experiments. We further introduce a specialized dataset containing 715 images as well as a custom detection model for light switch detection. We demonstrate how the framework can facilitate robot learning through physical interaction by having the robot explore the environment and discover previously unknown relationships in a scene graph representation. Lastly, we propose an extension to the framework to accommodate other functional interactions such as swing doors, showcasing its flexibility. Videos and Code: http://timengelbracht.github.io/SpotLight/},
+  year               = {2024},
+  doi                = {10.48550/arXiv.2409.11870},
+  url                = {https://arxiv.org/abs/2409.11870},
+}
+
+@Article{Yilmaz.etal.2024a,
+  title              = {OpenDAS: Domain Adaptation for Open-Vocabulary Segmentation},
+  journaltitle       = {arXiv},
+  author             = {Yilmaz, Gonca and Peng, Songyou and Pollefeys, Marc and Engelmann, Francis and Blum, Hermann},
+  abstract           = {Recently, Vision-Language Models (VLMs) have advanced segmentation techniques by shifting from the traditional segmentation of a closed-set of predefined object classes to open-vocabulary segmentation (OVS), allowing users to segment novel classes and concepts unseen during training of the segmentation model. However, this flexibility comes with a trade-off: fully-supervised closed-set methods still outperform OVS methods on base classes, that is on classes on which they have been explicitly trained. This is due to the lack of pixel-aligned training masks for VLMs (which are trained on image-caption pairs), and the absence of domain-specific knowledge, such as autonomous driving. Therefore, we propose the task of open-vocabulary domain adaptation to infuse domain-specific knowledge into VLMs while preserving their open-vocabulary nature. By doing so, we achieve improved performance in base and novel classes. Existing VLM adaptation methods improve performance on base (training) queries, but fail to fully preserve the open-set capabilities of VLMs on novel queries. To address this shortcoming, we combine parameter-efficient prompt tuning with a triplet-loss-based training strategy that uses auxiliary negative queries. Notably, our approach is the only parameter-efficient method that consistently surpasses the original VLM on novel classes. Our adapted VLMs can seamlessly be integrated into existing OVS pipelines, e.g., improving OVSeg by +6.0\% mIoU on ADE20K for open-vocabulary 2D segmentation, and OpenMask3D by +4.1\% AP on ScanNet++ Offices for open-vocabulary 3D instance segmentation without other changes. The project page is available at https://open-das.github.io/},
+  year               = {2024},
+  doi                = {10.48550/arXiv.2405.20141},
+  url                = {https://arxiv.org/abs/2405.20141}
+}
