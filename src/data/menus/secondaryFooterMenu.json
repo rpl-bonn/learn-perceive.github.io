@@ -15,8 +15,13 @@
     "weight": 2
   },
   {
-    "name": "PhenoRob Excellence Cluster",
+    "name": "PhenoRob",
     "url": "https://www.phenorob.de/index.html",
     "weight": 3
+  },
+  {
+    "name": "Robotics Institute Germany",
+    "url": "https://robotics-institute-germany.de/",
+    "weight": 4
   }
 ]
