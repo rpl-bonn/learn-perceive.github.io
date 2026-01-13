@@ -36,6 +36,10 @@ const WorkPage = ({ data }) => {
     {
       short: "PLR",
       directory: "perception-and-learning-for-robotics",
+    },
+    {
+      short: "SSL",
+      directory: "self-supervised-learning",
     }
   ];
   console.log(knownLectures);
