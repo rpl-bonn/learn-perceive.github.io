@@ -51,6 +51,8 @@ export default function Paper({ data }) {
       conference_summary = `CVPR ${data.date.year}`;
     } else if (data.journal.includes("ISARC")) {
       conference_summary = `ISARC ${data.date.year}`;
+    } else if (data.journal.includes("Transactions on Pattern Analysis")) {
+      conference_summary = `T-PAMI ${data.date.year}`;
     } else if (data.journal.includes(`${data.date.year}`)) {
       conference_summary = data.journal;
     } else {
@@ -168,12 +170,17 @@ export default function Paper({ data }) {
       <div className="col-md-12">
         <div className="card mb-3 paper-card">
           <div className="row g-0">
-            <div className="col-md-5">
+            <div className="col-lg-5">
               <div>{media_content}</div>
             </div>
-            <div className="col-md-7">
+            <div className="col-lg-7">
               <div className="card-body">
                 <h5 className="card-title">{data.title}</h5>
+                <p className="card-text">
+                  <small className="text-body-secondary">
+                    {data.authors}
+                  </small>
+                </p>
                 <p className="card-text mb-1">
                   <small className="text-body-secondary">
                     {conference_summary}
@@ -190,10 +197,13 @@ export default function Paper({ data }) {
     );
   } else {
     return (
-      <div className="col-md-6">
+      <div className="col-lg-6">
         <div className="card mb-3 paper-card">
           <div className="card-body">
             <h5 className="card-title">{data.title}</h5>
+            <p className="card-text">
+              <small className="text-body-secondary">{data.authors}</small>
+            </p>
             <p className="card-text mb-1">
               <small className="text-body-secondary">
                 {conference_summary}

@@ -3,14 +3,15 @@ import Paper from "../components/Paper";
 import Hero from "../components/Hero";
 import { graphql } from "gatsby";
 
-export const Head = () => <title>Our Research - Robot Perception and Learning Lab</title>;
-
+export const Head = () => (
+  <title>Our Research - Robot Perception and Learning Lab</title>
+);
 
 export const query = graphql`
   query PaperQuery {
     allPaper(
       sort: [{ date: { year: DESC } }, { date: { month: DESC } }]
-      filter: { date: { year: { gte: 2023 } } }
+      filter: { date: { year: { gte: 2024 } } }
     ) {
       nodes {
         id
@@ -62,6 +63,11 @@ const WorkPage = ({ data }) => {
   //     return result;
   //   }, []);
   const paperData = data.allPaper.nodes;
+  // filter out patents
+  const paperDataFiltered = paperData.filter(
+    (paper) =>
+      !(paper.journal && paper.journal.toLowerCase().includes("patent"))
+  );
   return (
     <>
       <div className="section">
@@ -72,16 +78,17 @@ const WorkPage = ({ data }) => {
               We investigate robots that can understand their environment
               semantically and geometrically, in order to perform manipulation
               and other safety critical tasks in proximity to humans. This
-              encompasses semantic understanding under open-set conditions, 
-              map representations of the environment, active perception and planning, 
-              as well as adaptation and continual self-supervised learning.
+              encompasses semantic understanding under open-set conditions, map
+              representations of the environment, active perception and
+              planning, as well as adaptation and continual self-supervised
+              learning.
             </div>
           </div>
         </div>
       </div>
       <div className="container">
         <div className="row">
-          {paperData.map((paper) => (
+          {paperDataFiltered.map((paper) => (
             <Paper data={paper} key={paper.id}></Paper>
           ))}
         </div>

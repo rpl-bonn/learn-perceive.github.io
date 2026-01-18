@@ -20,7 +20,7 @@ async function onCreateNode({
   const { createNode, createParentChildLink, createNodeField } = actions
   if (node.internal.type === "GoogleScholarProfile") {
     const paperId = createNodeId(
-      node.title.toLowerCase().trim().replace(/\s+/g, " ")
+      node.title.toLowerCase().trim().replace(/\s*/g, "")
     )
     let paperNode = getNode(paperId)
     // some processing for axiv
@@ -56,7 +56,7 @@ async function onCreateNode({
       // ORCID
       // add journal and author info
       paperNode.journal = paperNode.journal || journal
-      paperNode.authors = node.authors
+      // paperNode.authors = paperNode.authors || node.authors
       delete paperNode.internal.owner
     }
     createNode(paperNode)
@@ -98,7 +98,7 @@ async function onCreateNode({
       return
     }
     const paperId = createNodeId(
-      node.title.toLowerCase().trim().replace(/\s+/g, " ")
+      node.title.toLowerCase().trim().replace(/\s*/g, "")
     )
     let paperNode = getNode(paperId)
     if (!paperNode) {
@@ -141,7 +141,7 @@ async function onCreateNode({
   } else if (node.internal.type === "OrcidWork") {
     const summary = node["work-summary"][0]
     const paperId = createNodeId(
-      summary.title.title.value.toLowerCase().trim().replace(/\s+/g, " ")
+      summary.title.title.value.toLowerCase().trim().replace(/\s*/g, "")
     )
     let paperNode = getNode(paperId)
     // we always write over the scholar entry, but we save the children
@@ -149,8 +149,21 @@ async function onCreateNode({
     existingChildren = existingChildren.map(childId => getNode(childId))
     // existing journal in case orcid does not have one
     let existingJournal = paperNode ? paperNode.journal : null
-    // existing authors, because orcid does not provide them
+    // existing authors in case orcid does not have one
     let existingAuthors = paperNode ? paperNode.authors : null
+    // make a single string of orcid authors
+    let orcidAuthors = null
+    if (node["contributors"] && node["contributors"]["contributor"]) {
+      if (node["contributors"]["contributor"].length === 1) {
+        // this is old data
+        orcidAuthors = existingAuthors
+      } else {
+        orcidAuthors = node["contributors"]["contributor"]
+          .map(c => c["credit-name"] ? he.decode(c["credit-name"].value) : "")
+          .map(name => name.split(" ")[0][0] + " " + name.split(" ").slice(1).join(" "))
+          .join(", ")
+      }
+    }
     // sometimes the month is not set
     const month = summary["publication-date"].month
       ? parseInt(summary["publication-date"].month.value)
@@ -163,7 +176,7 @@ async function onCreateNode({
       journal: node["journal-title"]
         ? node["journal-title"].value
         : existingJournal,
-      authors: existingAuthors,
+      authors: orcidAuthors ? orcidAuthors : existingAuthors,
       creator: "orcid",
       date: {
         month,
